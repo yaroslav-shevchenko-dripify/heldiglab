@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Heldig Lab | Mobile App Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#1e1f25",
+                    "inverse-primary": "#005fad",
+                    "on-tertiary": "#482900",
+                    "background": "#111318",
+                    "surface-tint": "#a4c9ff",
+                    "on-tertiary-container": "#4d2c00",
+                    "surface-container-low": "#1a1b21",
+                    "on-primary-fixed-variant": "#004884",
+                    "on-error": "#690005",
+                    "on-primary": "#00315d",
+                    "on-secondary-fixed": "#191c22",
+                    "outline": "#8a919e",
+                    "secondary-container": "#44474f",
+                    "surface-dim": "#111318",
+                    "tertiary-fixed": "#ffdcbb",
+                    "surface": "#111318",
+                    "on-secondary-container": "#b3b5be",
+                    "on-tertiary-fixed": "#2c1700",
+                    "on-surface-variant": "#c0c7d4",
+                    "error-container": "#93000a",
+                    "on-primary-fixed": "#001c39",
+                    "error": "#ffb4ab",
+                    "on-secondary": "#2d3038",
+                    "on-surface": "#e2e2e9",
+                    "surface-bright": "#37393f",
+                    "on-tertiary-fixed-variant": "#683d00",
+                    "tertiary-fixed-dim": "#ffb869",
+                    "tertiary-container": "#de8800",
+                    "primary-container": "#4a9eff",
+                    "inverse-surface": "#e2e2e9",
+                    "surface-variant": "#33353a",
+                    "secondary-fixed-dim": "#c4c6d0",
+                    "tertiary": "#ffb869",
+                    "on-secondary-fixed-variant": "#44474f",
+                    "surface-container-highest": "#33353a",
+                    "secondary": "#c4c6d0",
+                    "primary-fixed": "#d4e3ff",
+                    "secondary-fixed": "#e0e2ec",
+                    "surface-container-high": "#282a2f",
+                    "inverse-on-surface": "#2e3036",
+                    "surface-container-lowest": "#0c0e13",
+                    "on-background": "#e2e2e9",
+                    "on-primary-container": "#003463",
+                    "primary": "#a4c9ff",
+                    "on-error-container": "#ffdad6",
+                    "outline-variant": "#414752",
+                    "primary-fixed-dim": "#a4c9ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0c0e13;
+            color: #e2e2e9;
+            font-family: 'Inter', sans-serif;
+        }
+        .heldig-gradient-text {
+            background: linear-gradient(135deg, #a4c9ff 0%, #4a9eff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .heldig-gradient-bg {
+            background: linear-gradient(135deg, #a4c9ff 0%, #4a9eff 100%);
+        }
+        .glass-header {
+            background: rgba(17, 19, 24, 0.7);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(65, 71, 82, 0.15);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#111318]/70 backdrop-blur-xl shadow-[0_20px_40px_rgba(164,201,255,0.04)]">
+<nav class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#a4c9ff]" data-icon="architecture">architecture</span>
+<span class="text-xl font-black tracking-tighter text-[#a4c9ff] font-['Manrope']">Heldig Lab</span>
+</div>
+<div class="hidden md:flex items-center gap-8 text-[10px] uppercase tracking-[0.1em] font-['Inter']">
+<a class="text-[#a4c9ff] font-bold border-b-2 border-[#4a9eff] pb-1 transition-colors duration-300" href="#">Home</a>
+<a class="text-slate-400 font-medium hover:text-[#a4c9ff] transition-colors duration-300" href="#apps">Apps</a>
+<a class="text-slate-400 font-medium hover:text-[#a4c9ff] transition-colors duration-300" href="#services">Services</a>
+<a class="text-slate-400 font-medium hover:text-[#a4c9ff] transition-colors duration-300" href="#about">About</a>
+</div>
+<a class="px-6 py-2 rounded-full bg-primary-container text-on-primary-container font-bold text-sm active:scale-95 transition-transform" href="mailto:contact@heldiglab.com">
+                Contact
+            </a>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-44 pb-32 px-8 overflow-hidden bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
+<div class="z-10">
+<span class="text-[10px] uppercase tracking-[0.2em] text-primary-container font-bold mb-6 block">Mobile Excellence</span>
+<h1 class="text-5xl md:text-7xl font-extrabold font-headline tracking-tighter mb-8 leading-[1.1]">
+                        Mobile apps for <br/>
+<span class="heldig-gradient-text">wellness, productivity &amp; learning</span>
+</h1>
+<p class="text-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+                        At Heldig Lab, we build digital companions that integrate seamlessly into your life. Our mission is to enhance daily routines through thoughtful design and technical precision.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-4 rounded-full heldig-gradient-bg text-on-primary font-bold shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+                            Explore Our Apps
+                        </button>
+<button class="px-8 py-4 rounded-full border border-outline-variant/30 text-primary font-bold hover:bg-white/5 active:scale-95 transition-transform">
+                            Work With Us
+                        </button>
+</div>
+</div>
+<div class="relative hidden lg:block">
+<div class="absolute -top-20 -right-20 w-96 h-96 bg-primary/10 blur-[120px] rounded-full"></div>
+<div class="relative aspect-square rounded-3xl bg-surface-container-low border border-outline-variant/15 p-8 shadow-2xl">
+<img alt="Mobile App Interface Design" class="w-full h-full object-cover rounded-xl grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-700" data-alt="Modern smartphone interface showing a sleek wellness app dashboard with minimalist charts and soft blue accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGsXOZGsm7KoOPjU1VQqxw0-WjNWTo9lQAkMrAHzSPiTnBaDO0nNZmnb_AmJ4zlgF12sBBlOFM728HxtHUKK92xditrXmSOgy_k2vg7k7ccXwMrMxf3VHFm5UhrU0F1h_Ir54RlQZK2ydja2aU7l0v4lXB4P_qDkxSy4Sf8U8PcxzZmAr19Z91eX7INSmKFo1Uwlv7RLPIRp5Y-Znr_qEtPEd5x2OZZv96lfJAiXvV9K4h4ZDSflaDI58gEo5EDYJT7I2FFiWdx7I"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Apps Grid Section -->
+<section class="py-32 px-8 bg-surface" id="apps">
+<div class="max-w-7xl mx-auto">
+<div class="mb-20">
+<h2 class="text-3xl font-bold font-headline mb-4">The Portfolio</h2>
+<div class="h-1 w-20 heldig-gradient-bg"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- App Card 1: FocusFlow -->
+<div class="bg-surface-container-low p-8 rounded-xl border border-transparent hover:border-primary-container/20 hover:bg-surface-container-high transition-all group">
+<div class="flex items-start justify-between mb-8">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="timer">timer</span>
+</div>
+<span class="text-[10px] uppercase tracking-widest text-slate-500 font-bold group-hover:text-primary transition-colors">Productivity</span>
+</div>
+<h3 class="text-2xl font-bold font-headline mb-3 text-on-surface">FocusFlow</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm">Adaptive Pomodoro timer designed for deep work sessions. Minimizes distractions through neural soundscapes and intelligent task batching.</p>
+</div>
+<!-- App Card 2: BreathFlow -->
+<div class="bg-surface-container-low p-8 rounded-xl border border-transparent hover:border-primary-container/20 hover:bg-surface-container-high transition-all group">
+<div class="flex items-start justify-between mb-8">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="air">air</span>
+</div>
+<span class="text-[10px] uppercase tracking-widest text-slate-500 font-bold group-hover:text-primary transition-colors">Wellness</span>
+</div>
+<h3 class="text-2xl font-bold font-headline mb-3 text-on-surface">BreathFlow</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm">Guided respiratory exercises to combat anxiety. Uses haptic feedback to guide your inhalation patterns without looking at the screen.</p>
+</div>
+<!-- App Card 3: EyeRest -->
+<div class="bg-surface-container-low p-8 rounded-xl border border-transparent hover:border-primary-container/20 hover:bg-surface-container-high transition-all group">
+<div class="flex items-start justify-between mb-8">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="visibility">visibility</span>
+</div>
+<span class="text-[10px] uppercase tracking-widest text-slate-500 font-bold group-hover:text-primary transition-colors">Health</span>
+</div>
+<h3 class="text-2xl font-bold font-headline mb-3 text-on-surface">EyeRest</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm">Intelligent blue light monitoring and scheduled breaks based on eye-strain metrics. Built for developers and digital artists.</p>
+</div>
+<!-- App Card 4: TinniCalm -->
+<div class="bg-surface-container-low p-8 rounded-xl border border-transparent hover:border-primary-container/20 hover:bg-surface-container-high transition-all group">
+<div class="flex items-start justify-between mb-8">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="hearing">hearing</span>
+</div>
+<span class="text-[10px] uppercase tracking-widest text-slate-500 font-bold group-hover:text-primary transition-colors">Medical</span>
+</div>
+<h3 class="text-2xl font-bold font-headline mb-3 text-on-surface">TinniCalm</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm">Sound therapy management for tinnitus sufferers. Personalized frequency masking and therapeutic ambient layers.</p>
+</div>
+<!-- App Card 5: GentleTrack -->
+<div class="bg-surface-container-low p-8 rounded-xl border border-transparent hover:border-primary-container/20 hover:bg-surface-container-high transition-all group">
+<div class="flex items-start justify-between mb-8">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="monitor_heart">monitor_heart</span>
+</div>
+<span class="text-[10px] uppercase tracking-widest text-slate-500 font-bold group-hover:text-primary transition-colors">Fitness</span>
+</div>
+<h3 class="text-2xl font-bold font-headline mb-3 text-on-surface">GentleTrack</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm">Low-impact movement tracker for recovery. Focuses on mobility and consistency over high-intensity strain metrics.</p>
+</div>
+<!-- App Card 6: MMMAth -->
+<div class="bg-surface-container-low p-8 rounded-xl border border-transparent hover:border-primary-container/20 hover:bg-surface-container-high transition-all group">
+<div class="flex items-start justify-between mb-8">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="calculate">calculate</span>
+</div>
+<span class="text-[10px] uppercase tracking-widest text-slate-500 font-bold group-hover:text-primary transition-colors">Learning</span>
+</div>
+<h3 class="text-2xl font-bold font-headline mb-3 text-on-surface">MMMAth</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm">Gamified mental mathematics for adults. Stay sharp with daily 3-minute competitive calculation sprints.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid Section -->
+<section class="py-32 px-8 bg-surface-container-low" id="services">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
+<div class="max-w-2xl">
+<h2 class="text-4xl font-extrabold font-headline mb-6">Expertise for the <span class="text-primary-container">Modern Web</span></h2>
+<p class="text-on-surface-variant">We don't just build apps; we architect ecosystems that drive retention and commercial success.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="p-12 bg-surface-container rounded-xl flex flex-col justify-between aspect-video md:aspect-auto">
+<div class="mb-12">
+<h4 class="text-xl font-bold mb-4">App Development</h4>
+<p class="text-slate-400 text-sm leading-loose">Native iOS and Android development using the latest declarative frameworks like SwiftUI and Jetpack Compose.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-[10px] uppercase tracking-widest font-bold">Native Stack</span>
+</div>
+</div>
+<div class="p-12 bg-surface-container rounded-xl flex flex-col justify-between">
+<div class="mb-12">
+<h4 class="text-xl font-bold mb-4">ASO Mastery</h4>
+<p class="text-slate-400 text-sm leading-loose">Algorithm-driven optimization for visibility. We handle keyword architecture and conversion-focused creative assets.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-[10px] uppercase tracking-widest font-bold">Visibility Engine</span>
+</div>
+</div>
+<div class="p-12 bg-surface-container rounded-xl flex flex-col justify-between">
+<div class="mb-12">
+<h4 class="text-xl font-bold mb-4">User Acquisition</h4>
+<p class="text-slate-400 text-sm leading-loose">Scalable paid growth strategies with a focus on LTV. We manage the full funnel from impression to subscription.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-[10px] uppercase tracking-widest font-bold">Growth Strategy</span>
+</div>
+</div>
+<div class="p-12 bg-surface-container rounded-xl flex flex-col justify-between">
+<div class="mb-12">
+<h4 class="text-xl font-bold mb-4">Data Analytics</h4>
+<p class="text-slate-400 text-sm leading-loose">Deep-dive event tracking and cohort analysis to understand user behavior and optimize product-market fit.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-[10px] uppercase tracking-widest font-bold">Insight Driven</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Google Ads Section -->
+<section class="py-32 px-8 bg-surface overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1">
+<div class="relative bg-surface-container-highest p-1 rounded-2xl overflow-hidden">
+<img alt="Data Analytics Dashboard" class="w-full rounded-xl opacity-80" data-alt="Technical data dashboard with complex line graphs, bar charts, and growth metrics displayed in a dark blue night-mode interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRqn35f1vMVzOX-0KKPWHAnpKhdx5v1NNCnn8BNA6sjbFNI2uWnCYruES6BKJLDhxOKU2R9FR5nIvSPh-Ekk_TfriqEseusilr-TVEoCjMeT2_iwDSk3FZY83gzqxxPdoCkxNMOA7BACaIAhQ4r0V1KKk4UEHgBio25cYemLEo9DBXQn6uHtI6G9e5cQxHFq8PbN9WjnC4nLSeHHob26_9FJ3bBfaoGOdyJWRBHjqN7xoFSa-dipKNO7dvjqJPn6JThLOmJoLrl8Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="text-3xl font-bold font-headline mb-6">Precise Campaign Management</h2>
+<p class="text-on-surface-variant mb-8 leading-relaxed">
+                            Our proprietary Google Ads integration allows for granular control over mobile app install campaigns. We leverage machine learning to automate bidding while manually tuning creative performance to ensure the lowest CPI in the market.
+                        </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="check_circle">check_circle</span>
+<span class="text-sm font-medium">UAC Optimization for maximized scale</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="check_circle">check_circle</span>
+<span class="text-sm font-medium">Multi-regional campaign deployment</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="check_circle">check_circle</span>
+<span class="text-sm font-medium">Creative A/B testing and localizations</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us & Contact Section -->
+<section class="py-32 px-8 bg-surface-container-lowest" id="about">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+<div>
+<h2 class="text-3xl font-bold font-headline mb-8">About Heldig Lab</h2>
+<p class="text-on-surface-variant mb-6 leading-relaxed">
+                            Founded in Kyiv, Ukraine, Heldig Lab is an indie studio of dedicated engineers and designers. We believe that mobile software should be a tool for empowerment, not a source of digital noise.
+                        </p>
+<p class="text-on-surface-variant leading-relaxed">
+                            Our philosophy centers on "Functional Elegance"—where every pixel serves a purpose and every interaction feels deliberate.
+                        </p>
+</div>
+<div class="bg-surface-container-low p-10 rounded-xl border border-outline-variant/10 shadow-2xl relative">
+<div class="absolute -top-6 -left-6 bg-primary-container text-on-primary-container p-4 rounded-xl">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</div>
+<h3 class="text-xl font-bold mb-6 mt-2">Get in Touch</h3>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<div class="p-2 rounded-lg bg-surface-container-highest">
+<span class="material-symbols-outlined text-primary-container" data-icon="alternate_email">alternate_email</span>
+</div>
+<div>
+<p class="text-xs text-slate-500 uppercase tracking-widest mb-1">Email</p>
+<a class="text-on-surface hover:text-primary transition-colors" href="mailto:contact@heldiglab.com">contact@heldiglab.com</a>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-2 rounded-lg bg-surface-container-highest">
+<span class="material-symbols-outlined text-primary-container" data-icon="location_on">location_on</span>
+</div>
+<div>
+<p class="text-xs text-slate-500 uppercase tracking-widest mb-1">Location</p>
+<p class="text-on-surface">Mytropolyta Vasylia Lypkivskoho St, 37v<br/>Kyiv, Ukraine</p>
+</div>
+</div>
+</div>
+<div class="mt-10">
+<button class="w-full py-4 rounded-xl border border-primary-container/30 text-primary-container font-bold hover:bg-primary-container hover:text-on-primary-container transition-all">
+                                Send a Message
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0c0e13] w-full py-12 border-t border-[#414752]/15">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-4">
+<span class="text-lg font-bold text-[#a4c9ff] font-['Manrope']">Heldig Lab</span>
+<span class="text-[10px] uppercase tracking-[0.1em] font-['Inter'] text-slate-500">© 2025-2026 Heldig Lab. All rights reserved.</span>
+</div>
+<div class="flex gap-8 text-[10px] uppercase tracking-[0.1em] font-['Inter']">
+<a class="text-slate-500 hover:text-[#a4c9ff] transition-opacity opacity-80 hover:opacity-100" href="privacy.html">Privacy Policy</a>
+<a class="text-slate-500 hover:text-[#a4c9ff] transition-opacity opacity-80 hover:opacity-100" href="terms.html">Terms of Service</a>
+<a class="text-slate-500 hover:text-[#a4c9ff] transition-opacity opacity-80 hover:opacity-100" href="mailto:contact@heldiglab.com">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>
