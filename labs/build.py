@@ -100,38 +100,6 @@ NICHES = [
         ],
     },
     {
-        "slug": "clip-engine",
-        "title": "Clip Engine",
-        "tagline": "One long video, thirty posts",
-        "lede": "The bottleneck in short-form isn't ideas, it's cutting. Clip Engine takes a long recording — a podcast, a webinar, a stream — and returns captioned vertical clips ranked by how likely each one is to hold attention.",
-        "price": "$49",
-        "price_note": "per month, 20 hours of source video",
-        "problem_title": "Editing is the reason most channels stall",
-        "problems": [
-            ("Cutting is slower than recording", "An hour of source material takes three to four hours to turn into a week of clips. That maths is why most content calendars quietly die."),
-            ("Picking the right moment is a guess", "Editors choose clips on instinct. Most of them flop, and you only learn which after posting."),
-            ("Every platform wants a different format", "Aspect ratios, caption styles, length caps and hooks differ per platform, so one clip becomes four exports."),
-        ],
-        "steps": [
-            ("Upload the long cut", "Any video or audio file, or a link to one. No editing required first."),
-            ("We find the moments", "Transcription plus retention modelling surfaces the segments most likely to hold attention, each scored with the reason."),
-            ("Export per platform", "Vertical, square or wide, captioned in your brand style, sized for each destination."),
-        ],
-        "gets": [
-            "Ranked clip suggestions with a score and rationale",
-            "Word-level captions in your own style preset",
-            "Auto-reframing that tracks the speaker",
-            "Exports for TikTok, Reels, Shorts and LinkedIn",
-            "Bulk export of an entire back catalogue",
-        ],
-        "faqs": [
-            ("What languages are supported?", "Transcription covers 30+ languages. Retention scoring is tuned on English first, and we are candid that it is weaker elsewhere until we have more data."),
-            ("Can I edit the clips afterwards?", "Yes — every clip exports as a normal video file, and you get the transcript and caption track separately."),
-            ("How long does processing take?", "Roughly a quarter of the source duration. A one-hour recording is ready in about fifteen minutes."),
-            ("Do you keep my footage?", "Source files are deleted 30 days after processing unless you ask us to keep them."),
-        ],
-    },
-    {
         "slug": "cart-rescue",
         "title": "Cart Rescue",
         "tagline": "Recover the checkout, prevent the chargeback",
