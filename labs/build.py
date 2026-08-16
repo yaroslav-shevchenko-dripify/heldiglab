@@ -68,38 +68,6 @@ NICHES = [
         ],
     },
     {
-        "slug": "contact-verify",
-        "title": "Contact Verify",
-        "tagline": "Validate a phone, email or IP in one call",
-        "lede": "Bad contact data poisons every downstream system — bounced sends, wasted dials, fraudulent signups. Contact Verify checks phone, email and IP in real time through a single endpoint, so bad records never reach your database.",
-        "price": "$0.002",
-        "price_note": "per lookup, no monthly minimum",
-        "problem_title": "Bad records cost more the later you catch them",
-        "problems": [
-            ("Bounces wreck sender reputation", "A list with 8% invalid addresses will damage domain reputation faster than any content problem, and recovery takes months."),
-            ("Fake signups scale your costs", "Disposable emails and VOIP numbers inflate your user count, your infrastructure bill and your support load simultaneously."),
-            ("Three vendors, three integrations", "Most teams buy email validation from one provider, phone from another and IP intelligence from a third — then maintain all three."),
-        ],
-        "steps": [
-            ("One endpoint", "POST a phone, email or IP. You get a verdict, a confidence score and the reason behind it."),
-            ("Validate at the boundary", "Call it on signup, on import, before a send. Reject or flag before the record lands."),
-            ("Watch the rejection reasons", "The breakdown tells you where bad data enters — a specific ad source, a specific form."),
-        ],
-        "gets": [
-            "Phone: line type, carrier, reachability, VOIP detection",
-            "Email: syntax, domain, mailbox existence, disposable detection",
-            "IP: proxy, VPN, datacentre and geolocation flags",
-            "Bulk endpoint for list cleaning",
-            "Sub-300ms responses, 99.9% uptime target",
-        ],
-        "faqs": [
-            ("How accurate is mailbox detection?", "Accuracy varies by provider — some mail servers deliberately accept everything. We return a confidence score rather than a false binary, and we tell you when a domain is catch-all."),
-            ("Do you store the data I send?", "Lookups are not retained beyond the request except as aggregate counts for your usage dashboard."),
-            ("Is there a free tier?", "Early access includes 5,000 free lookups so you can benchmark us against whatever you use now."),
-            ("What about GDPR?", "Validation is processed in the EU with a DPA available. Tell us your jurisdiction when you request access."),
-        ],
-    },
-    {
         "slug": "cart-rescue",
         "title": "Cart Rescue",
         "tagline": "Recover the checkout, prevent the chargeback",
