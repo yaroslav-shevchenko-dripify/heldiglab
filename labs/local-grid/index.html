@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Local Grid — Heldig Lab</title>
+<meta content="Your Maps rank, street by street. A single Google Maps ranking is a fiction — you rank differently on every block. Local Grid samples your position across" name="description"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#111318",
+              "surface": "#111318",
+              "surface-container": "#1e1f25",
+              "surface-container-low": "#1a1b21",
+              "surface-container-high": "#282a2f",
+              "on-surface": "#e2e2e9",
+              "on-surface-variant": "#c0c7d4",
+              "primary": "#a4c9ff",
+              "primary-container": "#4a9eff",
+              "on-primary": "#00315d",
+              "outline-variant": "#414752"
+            },
+            borderRadius: { DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem" },
+            fontFamily: { headline: ["Manrope"], body: ["Inter"] }
+          }
+        }
+      }
+</script>
+<style type="text/tailwindcss">
+      .heldig-gradient-text { @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-container; }
+      .heldig-gradient-bg { @apply bg-gradient-to-r from-primary to-primary-container; }
+</style>
+</head>
+<body class="bg-background font-body text-on-surface antialiased">
+<header class="border-b border-outline-variant/40">
+<div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+<a class="flex items-center gap-2 font-headline font-extrabold text-lg" href="https://heldiglab.com/">Heldig Lab</a>
+<a class="text-sm text-on-surface-variant hover:text-on-surface" href="#request">Request access</a>
+</div>
+</header>
+
+<main class="max-w-5xl mx-auto px-6">
+<section class="py-20 md:py-28">
+<span class="text-[10px] uppercase tracking-[0.2em] text-primary-container font-bold mb-6 block">Heldig Lab · Early access</span>
+<h1 class="text-4xl md:text-6xl font-extrabold font-headline tracking-tighter mb-6 leading-[1.1]">Local Grid<br/><span class="heldig-gradient-text">Your Maps rank, street by street</span></h1>
+<p class="text-lg text-on-surface-variant max-w-2xl mb-10 leading-relaxed">A single Google Maps ranking is a fiction — you rank differently on every block. Local Grid samples your position across a geographic grid and shows you the exact streets where you disappear.</p>
+<a class="inline-block px-8 py-4 rounded-full heldig-gradient-bg text-on-primary font-bold active:scale-95 transition-transform" href="#request">Request access</a>
+<p class="text-sm text-on-surface-variant mt-4">We are onboarding a small first group and building against their feedback.</p>
+</section>
+
+<section class="py-16 border-t border-outline-variant/40">
+<h2 class="text-3xl font-bold font-headline mb-10">One ranking number hides the whole problem</h2>
+<div class="grid md:grid-cols-3 gap-6"><div class="bg-surface-container rounded-xl p-6"><h3 class="font-bold mb-3">Rank is a map, not a number</h3><p class="text-on-surface-variant text-sm leading-relaxed">You might sit at position 2 outside your shop and position 19 a mile away. Rank trackers report one figure and average away the thing that matters.</p></div><div class="bg-surface-container rounded-xl p-6"><h3 class="font-bold mb-3">You cannot see your service radius</h3><p class="text-on-surface-variant text-sm leading-relaxed">Multi-location businesses have no view of where one branch's coverage stops and the next begins — or where neither of them shows up.</p></div><div class="bg-surface-container rounded-xl p-6"><h3 class="font-bold mb-3">Competitors own specific blocks</h3><p class="text-on-surface-variant text-sm leading-relaxed">Local visibility is won street by street. Without a grid you cannot tell who beats you where, or whether last month's work moved anything.</p></div></div>
+</section>
+
+<section class="py-16 border-t border-outline-variant/40">
+<h2 class="text-3xl font-bold font-headline mb-10">How it works</h2>
+<div class="grid md:grid-cols-3 gap-6"><div class="bg-surface-container rounded-xl p-6"><span class="text-[10px] uppercase tracking-widest font-bold text-primary-container">Step 1</span><h3 class="font-bold mt-3 mb-3">Drop a pin</h3><p class="text-on-surface-variant text-sm leading-relaxed">Give us your business and a radius. We build a sampling grid across it.</p></div><div class="bg-surface-container rounded-xl p-6"><span class="text-[10px] uppercase tracking-widest font-bold text-primary-container">Step 2</span><h3 class="font-bold mt-3 mb-3">We scan every point</h3><p class="text-on-surface-variant text-sm leading-relaxed">Each grid point is queried for your target keywords as if a customer were standing there.</p></div><div class="bg-surface-container rounded-xl p-6"><span class="text-[10px] uppercase tracking-widest font-bold text-primary-container">Step 3</span><h3 class="font-bold mt-3 mb-3">Read the heatmap</h3><p class="text-on-surface-variant text-sm leading-relaxed">Green where you win, red where you vanish, with week-over-week movement per point.</p></div></div>
+</section>
+
+<section class="py-16 border-t border-outline-variant/40 grid md:grid-cols-2 gap-12">
+<div>
+<h2 class="text-3xl font-bold font-headline mb-8">What you get</h2>
+<ul class="space-y-4"><li class="flex gap-3 text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary-container mt-2 shrink-0"></span><span>Geo-grid heatmap per keyword and location</span></li><li class="flex gap-3 text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary-container mt-2 shrink-0"></span><span>Week-over-week change per grid point</span></li><li class="flex gap-3 text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary-container mt-2 shrink-0"></span><span>Competitor overlay showing who wins each block</span></li><li class="flex gap-3 text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary-container mt-2 shrink-0"></span><span>Share-of-local-voice across the whole radius</span></li><li class="flex gap-3 text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary-container mt-2 shrink-0"></span><span>White-label PDF for reporting to clients</span></li></ul>
+</div>
+<div class="bg-surface-container rounded-xl p-8 h-fit">
+<span class="text-[10px] uppercase tracking-widest font-bold text-primary-container">Early access pricing</span>
+<div class="text-5xl font-extrabold font-headline my-4">$79</div>
+<p class="text-on-surface-variant mb-6">per month, 3 locations, weekly grid scans</p>
+<a class="block text-center px-6 py-3 rounded-full heldig-gradient-bg text-on-primary font-bold" href="#request">Request access</a>
+<p class="text-xs text-on-surface-variant mt-4">Early access pricing is held for the first year. No card required to request access.</p>
+</div>
+</section>
+
+<section class="py-16 border-t border-outline-variant/40">
+<h2 class="text-3xl font-bold font-headline mb-10">Questions</h2>
+<div class="space-y-8 max-w-3xl"><div><h3 class="font-bold mb-2">How dense is the grid?</h3><p class="text-on-surface-variant leading-relaxed">Configurable — from a 5×5 grid over a neighbourhood to 13×13 across a metro. Denser grids cost more to run, so we let you choose.</p></div><div><h3 class="font-bold mb-2">Which keywords should I track?</h3><p class="text-on-surface-variant leading-relaxed">The searches that bring buyers: "plumber near me", "emergency dentist". Start with five per location.</p></div><div><h3 class="font-bold mb-2">Does this work outside the US?</h3><p class="text-on-surface-variant leading-relaxed">Yes. The grid is coordinates, not postcodes, so it works anywhere Google Maps operates.</p></div><div><h3 class="font-bold mb-2">Do you support agencies?</h3><p class="text-on-surface-variant leading-relaxed">Multi-location and white-label reporting are in scope. Tell us your client count when you request access.</p></div></div>
+</section>
+
+<section class="py-16 border-t border-outline-variant/40" id="request">
+<div class="bg-surface-container rounded-xl p-8 md:p-12 max-w-2xl">
+<h2 class="text-3xl font-bold font-headline mb-3">Request access</h2>
+<p class="text-on-surface-variant mb-8">Tell us a little about your setup. We reply to every request personally, usually within two working days.</p>
+<form class="space-y-5" id="request-form">
+<div>
+<label class="block text-sm font-medium mb-2" for="name">Name</label>
+<input class="w-full rounded-lg bg-surface-container-high border-outline-variant/40 text-on-surface" id="name" name="name" required type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium mb-2" for="email">Work email</label>
+<input class="w-full rounded-lg bg-surface-container-high border-outline-variant/40 text-on-surface" id="email" name="email" required type="email"/>
+</div>
+<div>
+<label class="block text-sm font-medium mb-2" for="website">Website</label>
+<input class="w-full rounded-lg bg-surface-container-high border-outline-variant/40 text-on-surface" id="website" name="website" placeholder="example.com" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium mb-2" for="context">What are you using today?</label>
+<textarea class="w-full rounded-lg bg-surface-container-high border-outline-variant/40 text-on-surface" id="context" name="context" rows="3"></textarea>
+</div>
+<button class="w-full px-6 py-4 rounded-full heldig-gradient-bg text-on-primary font-bold active:scale-95 transition-transform" type="submit">Send request</button>
+<p class="text-xs text-on-surface-variant" id="form-note"></p>
+</form>
+</div>
+</section>
+</main>
+
+<footer class="border-t border-outline-variant/40 mt-10">
+<div class="max-w-5xl mx-auto px-6 py-10 text-sm text-on-surface-variant flex flex-wrap gap-x-6 gap-y-2 justify-between">
+<span>Local Grid is a Heldig Lab product, built and operated in-house.</span>
+<a class="hover:text-on-surface" href="https://heldiglab.com/">heldiglab.com</a>
+</div>
+</footer>
+
+<script>
+  const FORM_ENDPOINT = "";
+  const CONTACT_EMAIL = "heldig.lab@pm.me";
+  const PRODUCT = "Local Grid";
+
+  document.getElementById("request-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const note = document.getElementById("form-note");
+    const data = Object.fromEntries(new FormData(e.target).entries());
+    data.product = PRODUCT;
+
+    if (FORM_ENDPOINT) {
+      note.textContent = "Sending…";
+      try {
+        const res = await fetch(FORM_ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(data)
+        });
+        if (!res.ok) throw new Error(res.status);
+        e.target.innerHTML = '<p class="text-lg font-bold">Thank you — request received.</p><p class="text-on-surface-variant mt-2">We reply to every request personally, usually within two working days.</p>';
+        return;
+      } catch (err) {
+        note.textContent = "Could not send. Opening your email client instead.";
+      }
+    }
+
+    const body = Object.entries(data).map(([k, v]) => k + ": " + v).join("\n");
+    window.location.href =
+      "mailto:" + CONTACT_EMAIL +
+      "?subject=" + encodeURIComponent("Access request — " + PRODUCT) +
+      "&body=" + encodeURIComponent(body);
+  });
+</script>
+</body></html>
